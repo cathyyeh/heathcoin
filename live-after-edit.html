@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>健康幣 - 健康促進平台</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">+</div>
+        <div>
+          <div class="brand-title">健康幣</div>
+          <div class="brand-subtitle">Health Coin Platform</div>
+        </div>
+      </div>
+
+      <nav class="navigation">
+        <div class="nav-label">主功能</div>
+        <a href="#" class="nav-link active">
+          <span class="nav-icon">◎</span>
+          <span>總覽首頁</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="nav-icon">☑</span>
+          <span>任務挑戰</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="nav-icon">◌</span>
+          <span>健康幣兌換</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="nav-icon">☼</span>
+          <span>長照服務</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="nav-icon">☍</span>
+          <span>個人健康風險</span>
+        </a>
+      </nav>
+
+      <div class="mini-panel">
+        <div class="mini-title">本月目標</div>
+        <div class="progress-wrap">
+          <div class="progress-head">
+            <span>健康活躍達成</span>
+            <span>72%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width:72%"></div>
+          </div>
+        </div>
+        <div class="mini-description">
+          距離健康主題挑戰還差 <b>36</b> 健康幣
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <div class="page-kicker">健康署行動健康平台</div>
+          <h1>健康幣帳戶總覽</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn btn-light">日曆</button>
+          <button class="btn btn-primary">完成任務</button>
+        </div>
+      </header>
+
+      <section class="platform-intro">
+        <div class="intro-copy">
+          <div class="section-kicker">平台整合概念</div>
+          <h2>健康幣整合健康管理生態系</h2>
+          <p class="intro-summary">
+            健康幣不只是健康檢查後的獎勵機制，而是串接健康風險管理、步數挑戰、家庭照護、長照支持與社區健康資源的整合型行動健康平台。
+          </p>
+          <div class="intro-chip-row">
+            <span class="chip">健康檢查</span>
+            <span class="chip">生活行為</span>
+            <span class="chip">家庭照護</span>
+            <span class="chip">長照支持</span>
+            <span class="chip">資源兌換</span>
+          </div>
+        </div>
+        <div class="intro-analytics">
+          <div class="intro-analytics-title">整合成效</div>
+          <div class="analytics-grid">
+            <div>
+              <span class="analytics-number">4</span>
+              <span class="analytics-label">核心任務域</span>
+            </div>
+            <div>
+              <span class="analytics-number">12</span>
+              <span class="analytics-label">可用資源</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="system-summary">
+        <article class="summary-card highlight">
+          <div class="card-header">
+            <span class="icon-badge icon-green">₵</span>
+            <span class="small-label">健康幣餘額</span>
+          </div>
+          <div class="value">1,860</div>
+          <div class="meta-row">
+            <span class="tag success">+120 今日新增</span>
+            <span class="link-text">歷史紀錄</span>
+          </div>
+        </article>
+
+        <article class="summary-card">
+          <div class="card-header">
+            <span class="icon-badge icon-blue">✓</span>
+            <span class="small-label">任務完成</span>
+          </div>
+          <div class="value">08</div>
+          <div class="meta-row">
+            <span class="tag neutral">本月累積</span>
+            <span class="link-text">檢視任務</span>
+          </div>
+        </article>
+
+        <article class="summary-card">
+          <div class="card-header">
+            <span class="icon-badge icon-orange">♢</span>
+            <span class="small-label">挑戰進度</span>
+          </div>
+          <div class="value">3 / 5</div>
+          <div class="meta-row">
+            <span class="tag warning">健康挑戰中</span>
+            <span class="link-text">加入新挑戰</span>
+          </div>
+        </article>
+
+        <article class="summary-card">
+          <div class="card-header">
+            <span class="icon-badge icon-magenta">☊</span>
+            <span class="small-label">可兌換內容</span>
+          </div>
+          <div class="value">12</div>
+          <div class="meta-row">
+            <span class="tag success">限健康資源</span>
+            <span class="link-text">兌換清單</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid-two">
+        <article class="panel tasks-panel">
+          <div class="panel-header">
+            <div>
+              <div class="section-kicker">目前任務/挑戰列表</div>
+              <h2>今日任務</h2>
+            </div>
+            <button class="btn btn-outline">新增任務</button>
+          </div>
+          <div class="task-list">
+            <div class="task-row status-close">
+              <div class="row-left">
+                <span class="task-icon check">✓</span>
+                <div>
+                  <div class="task-title">健康檢查結果回填</div>
+                  <div class="task-meta">風險管理任務 · 120 健康幣</div>
+                </div>
+              </div>
+              <span class="task-status done">已完成</span>
+            </div>
+
+            <div class="task-row status-progress">
+              <div class="row-left">
+                <span class="task-icon progress">☏</span>
+                <div>
+                  <div class="task-title">社區健走挑戰</div>
+                  <div class="task-meta">步數挑戰 · 90 健康幣</div>
+                </div>
+              </div>
+              <span class="task-status progress-status">進行中</span>
+            </div>
+
+            <div class="task-row">
+              <div class="row-left">
+                <span class="task-icon medal">★</span>
+                <div>
+                  <div class="task-title">長照志工服務時數登錄</div>
+                  <div class="task-meta">志工服務 · 150 健康幣</div>
+                </div>
+              </div>
+              <span class="task-status pending">待完成</span>
+            </div>
+
+            <div class="task-row">
+              <div class="row-left">
+                <span class="task-icon health">＋</span>
+                <div>
+                  <div class="task-title">家庭健康照護任務</div>
+                  <div class="task-meta">照護任務 · 100 健康幣</div>
+                </div>
+              </div>
+              <span class="task-status pending">待完成</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel system-panel">
+          <div class="panel-header compact">
+            <div>
+              <div class="section-kicker">任務完成後自動加點</div>
+              <h2>系統說明</h2>
+            </div>
+            <span class="live-indicator">運作中</span>
+          </div>
+          <div class="info-list">
+            <div class="info-row">
+              <span class="info-icon">↻</span>
+              <div>
+                <div class="info-title">任務驗證</div>
+                <div class="info-copy">健康檢查、步數、服務時數、家屬照護任務完成後，自動記錄健康幣</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">☰</span>
+              <div>
+                <div class="info-title">加權計算</div>
+                <div class="info-copy">依任務難度、服務頻率與長照貢獻設定不同加點權重</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">⎋</span>
+              <div>
+                <div class="info-title">帳戶動態</div>
+                <div class="info-copy">使用者可在帳戶總覽中查看收益、兌換歷史與待完成任務</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid-two lower-row">
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="section-kicker">可兌換內容清單</div>
+              <h2>兌換選單</h2>
+            </div>
+            <button class="btn btn-outline">全部項目</button>
+          </div>
+          <div class="redeem-grid">
+            <div class="redeem-item">
+              <span class="redeem-icon">🥗</span>
+              <div>
+                <div class="redeem-title">健康餐優惠</div>
+                <div class="redeem-extra">需 300 點</div>
+              </div>
+            </div>
+            <div class="redeem-item">
+              <span class="redeem-icon">☀</span>
+              <div>
+                <div class="redeem-title">健康綜合補貼</div>
+                <div class="redeem-extra">需 400 點</div>
+              </div>
+            </div>
+            <div class="redeem-item">
+              <span class="redeem-icon">≋</span>
+              <div>
+                <div class="redeem-title">社區健康站服務</div>
+                <div class="redeem-extra">需 150 點</div>
+              </div>
+            </div>
+            <div class="redeem-item">
+              <span class="redeem-icon">⟁</span>
+              <div>
+                <div class="redeem-title">體適能活動折價</div>
+                <div class="redeem-extra">需 250 點</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="section-kicker">長照志工/服務小時對應設計</div>
+              <h2>長照服務兌換</h2>
+            </div>
+            <span class="badge soft">長照2.0</span>
+          </div>
+          <div class="longcare">
+            <div class="longcare-header">
+              <span class="service-label">志工服務時數</span>
+              <span class="service-hours">18.5 小時</span>
+            </div>
+            <div class="longcare-list">
+              <div class="longcare-row">
+                <span>陪伴長者關懷</span>
+                <span class="coins">+80</span>
+              </div>
+              <div class="longcare-row">
+                <span>健康站協助</span>
+                <span class="coins">+90</span>
+              </div>
+              <div class="longcare-row">
+                <span>社區活動運作</span>
+                <span class="coins">+120</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="case-section">
+        <div class="section-title-row">
+          <div>
+            <div class="section-kicker">四個競行 demo 使用案例</div>
+            <h2>健康幣行動任務入口</h2>
+          </div>
+          <button class="btn btn-primary small">建立新任務</button>
+        </div>
+
+        <section class="case-grid">
+          <article class="case-card">
+            <div class="case-top">
+              <span class="case-icon color-green">♡</span>
+              <span class="case-badge">健康檢查</span>
+            </div>
+            <h3>健康檢查與步數挑戰</h3>
+            <p>新加入者完成健康檢查及步數追蹤，取得健康幣與健康管理獎勵。</p>
+            <ul class="case-list">
+              <li>健康檢查與風險評估</li>
+              <li>每日步數打卡</li>
+              <li>健康幣加點</li>
+            </ul>
+            <div class="case-footer">
+              <span class="coins">+150</span>
+              <button class="btn btn-link">開始挑戰</button>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-top">
+              <span class="case-icon color-orange">☉</span>
+              <span class="case-badge">家庭照護</span>
+            </div>
+            <h3>家庭健康照護任務</h3>
+            <p>家庭成員完成血壓、作息、營養與照護任務，建立家庭健康認知與成就。</p>
+            <ul class="case-list">
+              <li>照護者健康管理任務</li>
+              <li>家庭健康風險回報</li>
+              <li>家庭任務加成</li>
+            </ul>
+            <div class="case-footer">
+              <span class="coins">+100</span>
+              <button class="btn btn-link">查看任務</button>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-top">
+              <span class="case-icon color-blue">♧</span>
+              <span class="case-badge">社區運動</span>
+            </div>
+            <h3>社區健身與運動挑戰</h3>
+            <p>把健康幣與運動幣串連，讓居民透過步數與體適能活動提升健康體驗。</p>
+            <ul class="case-list">
+              <li>社區步數挑戰</li>
+              <li>運動打卡與健走任務</li>
+              <li>社區活動折扣兌換</li>
+            </ul>
+            <div class="case-footer">
+              <span class="coins">+200</span>
+              <button class="btn btn-link">加入行列</button>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-top">
+              <span class="case-icon color-purple">♢</span>
+              <span class="case-badge">長照志工</span>
+            </div>
+            <h3>長照志工與照護支持</h3>
+            <p>志工與照護者完成服務時數與陪伴支持，將社會服務成果映射到健康幣系統。</p>
+            <ul class="case-list">
+              <li>志工貢獻時數記錄</li>
+              <li>陪伴與關懷任務</li>
+              <li>長照2.0 加成</li>
+            </ul>
+            <div class="case-footer">
+              <span class="coins">+180</span>
+              <button class="btn btn-link">查看服務</button>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section class="case-detail-section">
+        <div class="panel case-detail-panel">
+          <div class="panel-header">
+            <div>
+              <div class="section-kicker">Use Case 1</div>
+              <h2>健康檢查與步數挑戰</h2>
+            </div>
+            <span class="badge success">新加入者入門任務</span>
+          </div>
+          <div class="case-detail-layout">
+            <div class="detail-content">
+              <div class="detail-title">健康檢查新體驗</div>
+              <p class="detail-summary">使用者完成健康檢查與健康風險評估後，系統自動推送每日步數任務與健康行為追蹤，完成後發放健康幣與健康資源加成。</p>
+              <div class="detail-flow">
+                <div class="flow-step">
+                  <span class="flow-number">01</span>
+                  <div>
+                    <div class="flow-title">健康檢查登錄</div>
+                    <div class="flow-copy">完成身高、體重、血壓、血糖與風險分層</div>
+                  </div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-number">02</span>
+                  <div>
+                    <div class="flow-title">步數與行為任務</div>
+                    <div class="flow-copy">完成每日步數打卡、飲水、作息與健康追蹤</div>
+                  </div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-number">03</span>
+                  <div>
+                    <div class="flow-title">系統加點</div>
+                    <div class="flow-copy">任務完成後自動計算健康幣並更新兌換紀錄</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <aside class="detail-aside">
+              <div class="aside-kicker">任務成果</div>
+              <div class="aside-balance">+150</div>
+              <div class="aside-label">健康幣</div>
+              <div class="mini-button-row">
+                <button class="btn btn-primary small">立即完成</button>
+                <button class="btn btn-outline small">任務詳情</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-detail-section case-detail-section-alt">
+        <div class="panel case-detail-panel case-detail-panel-alt">
+          <div class="panel-header">
+            <div>
+              <div class="section-kicker">Use Case 2</div>
+              <h2>家庭健康照護任務</h2>
+            </div>
+            <span class="badge warning">家庭照護加成</span>
+          </div>
+          <div class="case-detail-layout">
+            <div class="detail-content">
+              <div class="detail-title">家庭健康護照</div>
+              <p class="detail-summary">家庭成員可藉由健康風險回報、血壓與作息追蹤、營養紀錄與照護任務完成，累積健康幣並提升整體照護成果。</p>
+              <div class="detail-flow">
+                <div class="flow-step">
+                  <span class="flow-number">01</span>
+                  <div>
+                    <div class="flow-title">家庭成員註冊</div>
+                    <div class="flow-copy">加入家庭帳戶並設定照護者／被照護者關係</div>
+                  </div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-number">02</span>
+                  <div>
+                    <div class="flow-title">健康照護任務</div>
+                    <div class="flow-copy">完成血壓、飲食、作息、身體活動與照護回報</div>
+                  </div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-number">03</span>
+                  <div>
+                    <div class="flow-title">照護加成發幣</div>
+                    <div class="flow-copy">家屬任務完成後發放健康幣與照護成果加成</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <aside class="detail-aside detail-aside-alt">
+              <div class="aside-kicker">家庭任務成果</div>
+              <div class="aside-balance">+100</div>
+              <div class="aside-label">健康幣</div>
+              <div class="mini-button-row">
+                <button class="btn btn-primary small">進入家屬任務</button>
+                <button class="btn btn-outline small">查看風險狀態</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="persona-section">
+        <div class="panel persona-panel">
+          <div class="panel-header">
+            <div>
+              <div class="section-kicker">不同 persona 看到不同任務推薦</div>
+              <h2>個人化任務推薦</h2>
+            </div>
+            <span class="badge success">自動推薦</span>
+          </div>
+
+          <div class="persona-selector">
+            <button class="persona-button active" data-persona="work">30-50歲職場家庭</button>
+            <button class="persona-button" data-persona="risk">50-65歲健康風險管理</button>
+            <button class="persona-button" data-persona="elder">65-80歲長者與照護者</button>
+          </div>
+
+          <div class="persona-feature">
+            <div class="feature-copy">
+              <div class="feature-label">目前推薦角色</div>
+              <div class="feature-title" id="personaTitle">30-50歲職場家庭族群</div>
+              <div class="feature-summary" id="personaSummary">以工作與家庭雙重節奏為主，任務需短、可完成且帶有即時回饋。</div>
+            </div>
+            <div class="feature-score">
+              <div class="feature-score-number" id="personaCoin">+120</div>
+              <div class="feature-score-label">本週可得健康幣</div>
+            </div>
+          </div>
+
+          <div class="persona-grid">
+            <div class="persona-card">
+              <div class="persona-title">30-50歲職場家庭族群</div>
+              <ul id="personaListWork">
+                <li>午間步數挑戰</li>
+                <li>職場健康檢查追蹤</li>
+                <li>家庭健康任務</li>
+              </ul>
+            </div>
+            <div class="persona-card">
+              <div class="persona-title">50-65歲健康風險管理者</div>
+              <ul id="personaListRisk">
+                <li>慢性病追蹤通知</li>
+                <li>健康風險追蹤回填</li>
+                <li>社區健走活動</li>
+              </ul>
+            </div>
+            <div class="persona-card">
+              <div class="persona-title">65-80歲長者與照護者</div>
+              <ul id="personaListElder">
+                <li>長照服務小時登錄</li>
+                <li>健康站關懷任務</li>
+                <li>照護家屬任務加成</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
