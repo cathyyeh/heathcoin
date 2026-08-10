@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>健康幣 UI/UX 說明文件</title>
+  <style>
+    :root {
+      --green-900: #123d32;
+      --green-700: #245d4e;
+      --green-500: #2f7d63;
+      --green-300: #9ed7bc;
+      --green-100: #eef8f1;
+      --text: #223631;
+      --muted: #5e706a;
+      --line: #d8e9df;
+      --shadow: 0 16px 40px rgba(18, 61, 50, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft JhengHei", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, #f4fbf7 0%, #edf7f0 100%);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 28px 24px 48px;
+    }
+
+    .slide {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px 30px;
+      margin-top: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #153f35 0%, #2b6d59 100%);
+      color: white;
+      padding: 36px 38px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 6px 0 10px;
+      font-size: 34px;
+      line-height: 1.18;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #d9f7e9;
+      font-size: 16px;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #b9ecd8;
+      margin-bottom: 8px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .hero-card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #ebfff3;
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #d9f7e9;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 22px;
+      color: var(--green-900);
+    }
+
+    .section-title .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--green-100);
+      color: var(--green-700);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fcfffd 0%, #f7fcf8 100%);
+      padding: 18px 18px 16px;
+    }
+
+    .card h3 {
+      margin: 4px 0 10px;
+      font-size: 17px;
+      color: var(--green-900);
+    }
+
+    .card ul { padding-left: 18px; margin: 0; }
+    .card li { margin-bottom: 7px; }
+
+    .accent {
+      border-left: 4px solid var(--green-500);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .timeline-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fbfffc;
+      border: 1px solid var(--line);
+    }
+
+    .step-no {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--green-900);
+      color: white;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .screenshot-wrap {
+      margin-top: 10px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #f7fcf8;
+    }
+
+    .screenshot-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .caption {
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 14px;
+      background: #f7fcf8;
+      border-top: 1px solid var(--line);
+    }
+
+    .persona-card {
+      border-radius: 16px;
+      padding: 16px;
+      background: #f9fdfb;
+      border: 1px solid var(--line);
+    }
+
+    .persona-card strong { color: var(--green-700); }
+
+    .note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--green-500);
+      background: #f3fbf6;
+      border-radius: 12px;
+      color: var(--muted);
+    }
+
+    @media print {
+      body { background: white; }
+      .page { max-width: none; padding: 0; }
+      .slide { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="slide hero">
+      <div>
+        <div class="eyebrow">Offline UI/UX Handoff</div>
+        <h1>健康幣 UI/UX 說明文件</h1>
+        <p>這份文件旨在將健康幣概念原型轉成可供衛福部與政策/設計夥伴理解的正式說明版本，重點呈現健康檢查、家庭照護、社區健身與長照服務四個核心場景的使用者體驗與介面方向。</p>
+        <div class="hero-tags">
+          <span class="tag">健康促進</span>
+          <span class="tag">長照2.0</span>
+          <span class="tag">家庭照護</span>
+          <span class="tag">社區參與</span>
+          <span class="tag">低門檻互動</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>簡報重點</h3>
+        <ul>
+          <li>說明健康幣的定位與使用情境</li>
+          <li>呈現使用者如何進入、完成任務與獲得回饋</li>
+          <li>強調介面設計應兼顧可理解、可持續與包容性</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="section-title">
+        <h2>設計目標與核心訊息</h2>
+        <span class="pill">Presentation Focus</span>
+      </div>
+      <div class="grid-2">
+        <div class="card accent">
+          <h3>設計目的</h3>
+          <ul>
+            <li>將「健康幣」從政策概念轉為可視化的使用者流程。</li>
+            <li>協助利害關係人快速理解「如何獲得、如何使用、如何看見成果」。</li>
+            <li>讓介面設計更貼近健康促進與公共服務的情境。</li>
+          </ul>
+        </div>
+        <div class="card accent">
+          <h3>核心訊息</h3>
+          <ul>
+            <li>健康幣不是單純的加分機制，而是健康行為的互動入口。</li>
+            <li>健康檢查、家庭照護、社區健身與長照服務都可成為參與入口。</li>
+            <li>設計上應強調清楚的回饋、低門檻與長期動機。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="section-title">
+        <h2>使用者旅程與互動流程</h2>
+        <span class="pill">User Journey</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <span class="step-no">1</span>
+          <div><strong>開始參與</strong><br />使用者從健康檢查、步數挑戰或志工服務入口進入。</div>
+        </div>
+        <div class="timeline-step">
+          <span class="step-no">2</span>
+          <div><strong>完成任務</strong><br />完成健康回報、日常行為、照護任務或社區活動。</div>
+        </div>
+        <div class="timeline-step">
+          <span class="step-no">3</span>
+          <div><strong>獲得回饋</strong><br />系統發放健康幣，並顯示進度、累積值與可兌換項目。</div>
+        </div>
+        <div class="timeline-step">
+          <span class="step-no">4</span>
+          <div><strong>持續參與</strong><br />透過挑戰、家屬任務與社區活動形成長期動機。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="section-title">
+        <h2>介面結構與設計原則</h2>
+        <span class="pill">Interface Structure</span>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>使用者進入後應先看到</h3>
+          <ul>
+            <li>我的帳戶與健康幣餘額</li>
+            <li>今日任務與挑戰</li>
+            <li>可兌換資源與照護加值</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>設計原則</h3>
+          <ul>
+            <li>低門檻：任務短、流程簡，讓使用者不會被吓退</li>
+            <li>可見回饋：完成任務後即時看到進度與獎勵</li>
+            <li>社會價值：不只看代幣，也看照護與社區貢獻</li>
+            <li>包容設計：考量高齡者與不同數位能力使用者</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="section-title">
+        <h2>原型畫面參考</h2>
+        <span class="pill">Wireframe Reference</span>
+      </div>
+      <div class="screenshot-wrap">
+        <img src="assets/demo_wireframe.png" alt="健康幣 demo wireframe 畫面" />
+      </div>
+      <div class="caption">此畫面可作為簡報中展示原型介面與界面區塊的視覺佐證。</div>
+    </section>
+
+    <section class="slide">
+      <div class="section-title">
+        <h2>主要畫面區塊</h2>
+        <span class="pill">Key Screen Areas</span>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>1. 帳戶總覽</h3>
+          <ul>
+            <li>顯示健康幣餘額、今日新增與任務完成次數</li>
+            <li>以清楚的數字與層次呈現，方便快速理解</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>2. 任務挑戰</h3>
+          <ul>
+            <li>讓使用者一眼看見進行中、待完成與已完成任務</li>
+            <li>有助於建立下一步引導與完成感</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>3. 兌換與獎勵</h3>
+          <ul>
+            <li>以健康生活與公共福利為主，不以商業化方式呈現</li>
+            <li>強調可兌換內容與所需點數的對應關係</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>4. 長照與照護</h3>
+          <ul>
+            <li>將志工時數、陪伴服務與照護任務視為獲得回饋的另一種方式</li>
+            <li>提升對長照2.0 的可理解性與公共價值</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="section-title">
+        <h2>Persona 設計與使用者考量</h2>
+        <span class="pill">Audience Fit</span>
+      </div>
+      <div class="grid-3">
+        <div class="persona-card">
+          <strong>30–50歲職場家庭</strong>
+          <p>偏好短時間、可快速完成、與工作與家庭生活有關的任務。</p>
+        </div>
+        <div class="persona-card">
+          <strong>50–65歲健康風險管理者</strong>
+          <p>更重視健康檢查追蹤、慢性病管理與家庭健康照護的情境。</p>
+        </div>
+        <div class="persona-card">
+          <strong>65–80歲長者與照護者</strong>
+          <p>介面需更簡潔、支持陪伴式操作，並強化社區與照護價值。</p>
+        </div>
+      </div>
+
+      <div class="note">
+        建議在分享給衛福部時，依序說明定位、使用者與場景、介面如何引導下一步，最後說明這個設計如何成為低門檻、可持續且具社會價值的公共健康工具。
+      </div>
+    </section>
+  </div>
+</body>
+</html>
