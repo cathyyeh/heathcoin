@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", "Microsoft JhengHei", Arial, sans-serif;
-  background: linear-gradient(120deg, #eefaf6 0%, #eef7ed 100%);
+  background: linear-gradient(135deg, #f4fcf7 0%, #eef8ff 100%);
   color: #18352d;
 }
 
@@ -19,7 +19,7 @@ body {
   margin-top: 24px;
   padding: 24px 28px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #effbf3 0%, #e9fbef 100%);
+  background: linear-gradient(135deg, #effbf3 0%, #e6f7fb 100%);
   border: 1px solid #bfdccd;
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@ body {
 
 .intro-analytics {
   min-width: 260px;
-  background: linear-gradient(135deg, #174a3d, #276a58);
+  background: linear-gradient(135deg, #174a3d, #2b6b62);
   border-radius: 18px;
   padding: 20px;
   color: white;
@@ -120,7 +120,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 900;
 }
 
@@ -815,6 +815,7 @@ body {
   border: 1px solid #dcebec;
   padding: 20px;
   min-height: 260px;
+  transition: transform 180ms ease, border-color 180ms ease;
 }
 
 .case-top {
